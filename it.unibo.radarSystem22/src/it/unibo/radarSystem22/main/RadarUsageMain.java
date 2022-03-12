@@ -7,6 +7,7 @@ public class RadarUsageMain {
             radarSupport.setUpRadarGui();
             radarSupport.update( "40.9", "60");
     }
+    
     public static void main(String[] args) {
             new RadarUsageMain().doJob();
     }
