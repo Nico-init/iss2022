@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import it.unibo.radarSystem22.domain.mock.LedMock;
+import it.unibo.radarSystem22.domain.mock.LedMockMy;
 
 public class TestLed {
 
@@ -23,7 +23,7 @@ public class TestLed {
 	@Test
 	public void testLedMockOn() {
 		System.out.println("testLedMockOn");
-		LedMock led = new LedMock();
+		LedMockMy led = new LedMockMy();
 
 		assertTrue(!led.getState());
 
@@ -34,7 +34,7 @@ public class TestLed {
 	@Test
 	public void testLedMockOff() {
 		System.out.println("testLedMockOff");
-		LedMock led = new LedMock();
+		LedMockMy led = new LedMockMy();
 
 		assertTrue(!led.getState());
 

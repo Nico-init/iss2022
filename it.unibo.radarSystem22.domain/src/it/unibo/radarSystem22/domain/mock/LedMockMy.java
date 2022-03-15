@@ -2,10 +2,10 @@ package it.unibo.radarSystem22.domain.mock;
 
 import it.unibo.radarSystem22.domain.interfaces.ILed;
 
-public class LedMock implements ILed {
+public class LedMockMy implements ILed {
 	private boolean state;
 
-	public LedMock() {
+	public LedMockMy() {
 		state = false;
 	}
 	

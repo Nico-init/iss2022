@@ -10,4 +10,12 @@
     <fullyQualifiedTypeName name="java.net.DatagramSocket"/>
     <fullyQualifiedTypeName name="java.net.SocketException"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.mock.DistanceMock"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.mock.SonarMock"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="java.io.Reader"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.mock.SonarMockMy"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.Distance"/>
 </qualifiedTypeNameHistroy>
