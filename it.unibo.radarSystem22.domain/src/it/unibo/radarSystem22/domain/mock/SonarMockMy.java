@@ -49,7 +49,7 @@ public class SonarMockMy implements ISonar {
 	}
 
 	@Override
-	public boolean isActivate() {
+	public boolean isActive() {
 		return state;
 	}
 

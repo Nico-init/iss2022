@@ -1,45 +1,61 @@
 package it.unibo.radarSystem22.domain;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import org.junit.*;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import it.unibo.radarSystem22.domain.mock.LedMockMy;
-
+import it.unibo.radarSystem22.domain.interfaces.ILed;
+import it.unibo.radarSystem22.domain.mock.LedMock;
+import it.unibo.radarSystem22.domain.utils.BasicUtils;
+import it.unibo.radarSystem22.domain.utils.DomainSystemConfig;
+ 
 public class TestLed {
-
+ 
 	@Before
 	public void up() {
 		System.out.println("up");
 	}
-
+	
 	@After
 	public void down() {
-		System.out.println("down");
-	}
-
-	@Test
-	public void testLedMockOn() {
-		System.out.println("testLedMockOn");
-		LedMockMy led = new LedMockMy();
-
-		assertTrue(!led.getState());
-
-		led.turnOn();
-		assertTrue(led.getState());
-	}
-
-	@Test
-	public void testLedMockOff() {
-		System.out.println("testLedMockOff");
-		LedMockMy led = new LedMockMy();
-
-		assertTrue(!led.getState());
-
-		led.turnOff();
-		assertTrue(!led.getState());
-	}
-
+		System.out.println("down");		
+	}	
+	
+	@Test 
+	public void testLedMock() {
+		
+		System.out.println("testLedMock");
+		DomainSystemConfig.simulation = true; 
+		
+		ILed led = DeviceFactory.createLed();
+		assertTrue( ! led.getState() );
+		
+ 		led.turnOn();
+		assertTrue(  led.getState() );
+		
+		BasicUtils.delay(1000);		//to see the ledgui
+		
+ 		led.turnOff();
+		assertTrue(  ! led.getState() );	
+		
+		BasicUtils.delay(1000);		//to see the ledgui
+	}	
+	
+	//@Test
+	//Da eseguire solo sul raspberry
+	public void testLedConcrete() {
+		
+		System.out.println("testLedConcrete");
+		DomainSystemConfig.simulation = false; 
+		
+		ILed led = DeviceFactory.createLed();
+		assertTrue( ! led.getState() );
+		
+ 		led.turnOn();
+		assertTrue(  led.getState() );
+		
+ 		led.turnOff();
+		assertTrue(  ! led.getState() );		
+	}		
+	
+ 
 }

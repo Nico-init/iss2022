@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import it.unibo.radarSystem22.domain.mock.SonarMockMy;
 
-public class TestSonar {
+public class TestSonarMy {
 
 	@Before
 	public void up() {
@@ -27,11 +27,11 @@ public class TestSonar {
 		
 		SonarMockMy sonar = new SonarMockMy();
 		
-		assertFalse(sonar.isActivate());
+		assertFalse(sonar.isActive());
 		
 		sonar.activate();
 		long startTime = System.currentTimeMillis();
-		assertTrue(sonar.isActivate());
+		assertTrue(sonar.isActive());
 		
 		assertEquals(sonar.getDistance().getVal(), 90);
 		
@@ -50,7 +50,7 @@ public class TestSonar {
 		*/
 		
 		sonar.deactivate();
-		assertFalse(sonar.isActivate());
+		assertFalse(sonar.isActive());
 	}
 	
 }
