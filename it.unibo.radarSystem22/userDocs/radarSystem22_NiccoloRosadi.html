@@ -237,7 +237,7 @@ Si desidera costruire un'applicazione software capace di:
     <ul>
         <li>(requisito <b>radarGui</b>) Si e' utilizzato la classe <tt>radarSupport</tt> fornita dal committente per mostrare a video un output a forma di radar. Questo radar legge la distanza 
         rilevata dal sonar tramite una connessione UDP con il Raspberry - <a href="../src/it/unibo/radarSystem22/main/RadarConnRaspMain.java">RadarConnRaspMain</a> </li>
-        <li>(requisito <b>ledAlarm</b>) Si e' deciso di scrivere due nuovi file python che rappresentino il <a href="../raspCode/MyLed.py">LED</a>  e il <a href="../raspCode/MySonar.py">SONAR</a> con le loro relative operazioni.
+        <li id="newClass">(requisito <b>ledAlarm</b>) Si e' deciso di scrivere due nuovi file python che rappresentino il <a href="../raspCode/MyLed.py">LED</a>  e il <a href="../raspCode/MySonar.py">SONAR</a> con le loro relative operazioni.
         Questi due file, che contengono le rispettive due classi, sono utilizzati da una terza entita: un <a href="../raspCode/MyController.py">CONTROLLER</a> che si occupera' di 
         eseguire la logica di business espressa nel requisito, oltre al fatto che si occupa anche di inviare le misurazioni del sonar al RadarDisplay tramite UDP</li>
         <li>Scegliendo di rappresentare il LED ed il SONAR con un approccio ad oggetti, si e' potuto evitare di utilizzare la pipe (dato che i programmi non si basano piu su stdin/stdout)
@@ -257,11 +257,10 @@ Si desidera costruire un'applicazione software capace di:
             che fa da server e che contiene anche la logica applicativa per mostrare il RadarDisplay</li>
         <li>Non creo un nuovo thread per ogni richiesta ricevuta: soluzione molto semplicistica dato che avevo
             considerato la presenza di un solo cliente. </li>
-        <li>Gestione non corretta anche dell'invio di dati dal <a href="../raspCode/MyController.py">Controller</a> al
-            <a href="../src/it/unibo/radarSystem22/main/RadarConnRaspMain.java">RadarConnRaspMain</a>: non utilizzo il terminatore di linea
-            come separatore fra un messaggio ed un altro</li>
         <li>Utilizzo del protocollo UDP cablato direttamente nel codice senza utilizzo di interfacce per 
             disaccoppiarsi dall'implementazione</li>
+        <li>Nel <a href="../raspCode/MyController.py">Controller</a> non invoco i file forniti dal cliente
+        ma uso le <a href="#newClass">classi</a> python che ho creato io, invocandone i metodi opportuni</li>
     </ul>
 </div>
 
