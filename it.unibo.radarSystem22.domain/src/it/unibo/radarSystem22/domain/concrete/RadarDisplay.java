@@ -25,7 +25,7 @@ private static RadarDisplay display = null; //singleton
 		curDistance =  distance;
 		radarSupport.update(distance,angle);
 	}
-	
+	@Override
  	public int getCurDistance() {
 		ColorsOut.out("RadarDisplay | getCurDistance="+curDistance);
 		return Integer.parseInt(curDistance);
