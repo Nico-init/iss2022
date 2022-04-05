@@ -15,7 +15,8 @@ private ILed led;
  		this.led = led;
 	}
 
-     
+    
+	@Override
  	public String elaborate( String message ) {
 		ColorsOut.out("LedApplInterpreter | elaborate String=" + message  + " led="+led, ColorsOut.GREEN);
 	 		if( message.equals("getState") ) return ""+led.getState() ;
