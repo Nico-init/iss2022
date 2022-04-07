@@ -55,6 +55,7 @@ private ActionFunction endFun;
 	 					}
 					}				
 					//ColorsOut.outappl("Controller | BYE", ColorsOut.BLUE  );
+//					led.getState();	//DA TOGLIERE: per prova
 					sonar.deactivate();
 					endFun.run("Controller | BYE ");
 					//System.exit(0);

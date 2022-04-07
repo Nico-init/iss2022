@@ -15,7 +15,7 @@ import it.unibo.radarSystem22_4.comm.utils.BasicUtils;
  * Un oggetto contatore di nome 'counter' (classe CounterWithDelay) con valore iniziale 2 
  * esegue l'operazione dec rilasciando il controllo per un certo tempo.
  * Questo contatore viene reso capace di gestire messaggi da un CounterApplHandler che lo incapsula.
- * Due client inviano il comando (dispatch) dec a 'counter', che però non va a 0
+ * Due client inviano il comando (dispatch) dec a 'counter', che pero' non va a 0
  * Il sistema attiva 4 thread (main, TcpContextSerer e due client)
  */
 public class SharedCounterExampleMain  {

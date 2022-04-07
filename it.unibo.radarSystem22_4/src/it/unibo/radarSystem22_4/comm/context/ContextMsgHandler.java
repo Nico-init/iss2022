@@ -19,7 +19,7 @@ import it.unibo.radarSystem22_4.comm.utils.ColorsOut;
  *  per i messaggi che costituiscono richieste
  *  
  *  Il ContextMsgHandler potrebbe inviare al RECEIVER  il messaggio in forma estesa
- *  ma il RECEIVER non sarebbe più quello usato nella versione precedente.
+ *  ma il RECEIVER non sarebbe piu' quello usato nella versione precedente.
  */
 
 public class ContextMsgHandler extends ApplMsgHandler implements IContextMsgHandler{

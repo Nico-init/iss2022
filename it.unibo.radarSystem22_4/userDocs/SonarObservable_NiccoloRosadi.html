@@ -229,29 +229,51 @@ Sonar Observable - Sprint4
     <ul>
         <li>[R-1] Il <em>(SonarObservable)</em> deve avere una flessibilita' tale da parmettere a qualunque componte interessato
             di ricevere la distanza</li>
-        <li>[R-2] E' il <em>(SonarObservable)</em> che decide quando inviare la distanza agli <em>Observer</em>: la nuova distanza 
-            deve essere diversa in modo significativo rispetto alla precedente</li>
-        <li>[R-3] Gli <em>Observer</em> possono essere sia locali che remoti</li>
+        <li>[R-2] E' il <em>(SonarObservable)</em> che decide quando inviare la distanza agli <em>Observer</em>: per diversi in modo 
+            significativo, il committente ha specificato che intende 2cm rispetto al precedente valore inviato</li>
+        <li>[R-3] Gli <em>Observer</em> possono essere sia locali che remoti. Ci troviamo quindi in un ambiente distribuito</li>
         <li>[R-4] Necessita' di testare il <em>(SonarObservable)</em> in modo automatico. Da 
-            questo requisito si ricava anche una User-story da utilizzare per i test </li>
+            questo requisito si ricava anche una <b>User-story</b> da utilizzare per i test </li>
     </ul>
 </div>
 
 
 <h2>Problem analysis</h2>
 <div class="remark">
+    <p>Si puo pensare il <em>SonarObservable</em> in due modi:
+        <ul>
+            <li>modo1: rendendo ossevabile il sonar </li>
+            <li>modo2: rendendo osservabile solo la distanza misurata dal Sonar</li>
+        </ul>
+    </p>
+
+    <p>
+        Alcune considerazioni:
     <ul>
         <li><b>osservare un disposistivo</b> significa osservare i valori prodotti e non il suo stato 
             interno. In base allo stato interno e alla sua esecuzione, il dispositivo sceglie cosa mostrare all'esterno</li>
+
         <li>La distanza non e' una proprieta' del dispositivo Sonar, bensi' un risultato del suo operato.
             Esempi di proprieta' potrebbero essere: MaxDistanzaRilevabile, MinDistanzaRilevabile, precisione...</li>
-        <li>Quanto tutto e' in locale, la semplice implementazione da parte del Sonar dell'interfaccia <em>IObservableSonar</em> e 
-            e del Controller dell'interfaccia IObserver</li>, con relativa implementazione dei metodi e modifica del Controller per 
-            non invocare piu il metodo del Sonar `getDistance()` e spostare la logica di activate dentro `update()`. 
-            Se siamo nel distribuito, e' necessario modificare il SonarProxy per permettergli di ricevere il messaggio di update 
-            da parte del Sonar. Dalla parte del Sonar c'e' bisogno che qualcuno che implementa IObserver si registri al Sonar e poi invii
-            il relativo messaggio quando viene invocato update
     </ul>
+        In base a cio che e' stato specificato dal committente e dalle considerazioni sopra, si deduce che il <b>modo2</b>
+        sia la miglior soluzione per risolvere il problema, dato che ci interessa solo il valore di distaza prodotto dal Sonar.
+    </p>
+    <p>
+        Per formalizzare tale scelta si introducono le interfacce:
+        
+<pre><code>
+public interface IObservableDistance extends IDistance {
+    public void setDistance(IDistance distance);
+    public void register(IObserver observer);
+    public void unregister(IObserver observer);
+    public void notifyObserver();
+}</code></pre>
+<pre><code>
+public interface IObserver {
+    public void update(IDistance distance);
+}</code></pre> 
+    </p>
 </div>
 
 

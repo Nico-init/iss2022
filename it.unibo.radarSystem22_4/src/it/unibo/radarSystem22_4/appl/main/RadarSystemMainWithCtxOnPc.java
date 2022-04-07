@@ -30,7 +30,7 @@ public class RadarSystemMainWithCtxOnPc implements IApplication{
 	}
 	
 	public void setup( String domainConfig, String systemConfig )  {
-		RadarSystemConfig.DLIMIT           = 80;
+		RadarSystemConfig.DLIMIT           = 20;
 		RadarSystemConfig.tracing          = true;
 		RadarSystemConfig.ctxServerPort    = 8756;
 		RadarSystemConfig.raspAddr         = "192.168.1.106"; //"localhost";//

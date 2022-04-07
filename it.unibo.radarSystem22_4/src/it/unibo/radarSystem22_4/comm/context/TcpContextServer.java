@@ -7,7 +7,7 @@ import it.unibo.radarSystem22_4.comm.tcp.TcpServer;
 
 /*
  * Decorator
- * TcpContextServer è un singleton che si crea un proprio gestore di messaggi di tipo ContextMsgHandler
+ * TcpContextServer e' un singleton che si crea un proprio gestore di messaggi di tipo ContextMsgHandler
  * E' un decorator di TcpServer che offre i metodi addComponent/removeComponent che delega al ContextMsgHandler
  * Il ContextMsgHandler gestisce messaggi della forma 'estesa':
  *   msg( MSGID, MSGTYPE, SENDER, RECEIVER, CONTENT, SEQNUM ) e 
