@@ -273,7 +273,18 @@ public interface IObservableDistance extends IDistance {
 public interface IObserver {
     public void update(IDistance distance);
 }</code></pre> 
-    </p>
+    
+    OSSERVAZIONE: Non so se e' una cosa che riguarda la fase di analisi o gia' riguarda le fasi successive, pero' 
+    io introdurrei anche un interfaccia che specifiche che tramite il sonar e' possibile iscriversi (<code>register(..)</code>)
+    ad un oggetto <code>IObservableDistance</code>. Altrimenti non saprei come iscrivermi dall'esterno.
+<pre><code>
+    public interface IObserveDistance{
+        public void register(IObserver observer);
+        public void unregister(IObserver observer);
+    }</code></pre> 
+
+    Pero' sinceramente la cosa non mi convince affatto
+</p>
 </div>
 
 
