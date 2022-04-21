@@ -82,9 +82,9 @@ public class ClientNaiveUsingPost {
 MAIN
  */
 	public static void main(String[] args)   {
-		CommUtils.aboutThreads("Before start - ");
+//		CommUtils.aboutThreads("Before start - ");
  		new ClientNaiveUsingPost().doBasicMoves();
-		CommUtils.aboutThreads("At end - ");
+//		CommUtils.aboutThreads("At end - ");
 	}
 	
  }
