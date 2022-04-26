@@ -40,7 +40,7 @@ private EnablerContextForActors ctx;
 
 	public void terminate() {
 		CommUtils.aboutThreads("Before exit - ");
-// 	    CommUtils.delay(5000);
+// 	    CommUtils.delay(15000);
 //		System.exit(0);
 	}
 	
