@@ -281,10 +281,10 @@ private testableWorkRobot robot = new RobotCleaner();
 @Test
 public void testCleaning(){
   boolean check = true;
-  int[][] trueMat = {{true,true,true,true,true,true,true,true,true,true,true,true,true},
+  boolean[][] trueMat = {{true,true,true,true,true,true,true,true,true,true,true,true,true},
               {true,true,true,true,true,true,true,true,true,true,true,true,true}};
   
-  int[][] result = robot.cleanRoom();
+  boolean[][] result = robot.cleanRoom();
   
   for(int i = 0; i < trueMat.length && check==true; i++) {
     for (int j = 0; j < trueMat[i].length && check==true; j++) {

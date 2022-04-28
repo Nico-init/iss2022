@@ -43,7 +43,7 @@ public class ClientNaiveUsingHttp {
 			//ColorsOut.out( "ClientUsingPost | sendCmd response= " + response );
 			String jsonStr = EntityUtils.toString( response.getEntity() );
 			JSONObject jsonEndmove = new JSONObject(jsonStr) ;
-			ColorsOut.out("IssHttpSupport | jsonEndmove=" + jsonEndmove);
+			//ColorsOut.out("IssHttpSupport | jsonEndmove=" + jsonEndmove);
 			if( jsonEndmove.get("endmove") != null ) {
 				endmove = jsonEndmove.getBoolean("endmove");
 			}

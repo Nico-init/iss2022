@@ -1,4 +1,4 @@
-package unibo.wenvUsage22.actors.basic;
+package unibo.wenvUsage22.actors.fsm.basic;
 
 import unibo.actor22.Qak22Context;
 import unibo.actor22.Qak22Util;
@@ -11,18 +11,15 @@ import unibo.actor22comm.utils.CommUtils;
 
 
 @Context22(name = "pcCtx", host = "localhost", protocol=ProtocolType.tcp, port = "8083")
-@Actor22(name = MainActorUsingWEnv.myName, contextName = "pcCtx", implement = ActorWithObserverUsingWEnv.class)
-//@Actor22(name = MainActorUsingWEnv.myName, contextName = "pcCtx", implement = ActorAsObserverUsingWEnv.class)
-public class MainActorUsingWEnv {
+@Actor22(name = MainActorFsmBasic.myName, contextName = "pcCtx", implement = ActorWithFsmBasic.class)
+public class MainActorFsmBasic {
 	
-	public static final String myName = "wenvUse";
+	public static final String myName = "boundaryWalkerFsmbasic";
 	
 	public void doJob() {
 		CommSystemConfig.tracing = false;
-		//AnnotUtil.handleRepeatableActorDeclaration(this);
-		Qak22Context.configureTheSystem(this);
+ 		Qak22Context.configureTheSystem(this);
 		Qak22Context.showActorNames();
-  		//Qak22Util.sendAMsg( ApplData.startSysCmd("main",myName) );
   		Qak22Util.sendAMsg( SystemData.startSysCmd("main",myName) );
 	};
 
@@ -35,7 +32,7 @@ public class MainActorUsingWEnv {
 	
 	public static void main( String[] args) throws Exception {
 		CommUtils.aboutThreads("Before start - ");
-		MainActorUsingWEnv appl = new MainActorUsingWEnv( );
+		MainActorFsmBasic appl = new MainActorFsmBasic( );
 		appl.doJob();
 		appl.terminate();
 	}
