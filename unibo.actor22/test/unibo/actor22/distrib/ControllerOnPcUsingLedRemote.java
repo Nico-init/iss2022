@@ -39,7 +39,6 @@ public class ControllerOnPcUsingLedRemote {
 		Qak22Context.setActorAsRemote( 
 				ApplData.ledName, ""+ApplData.ctxPort, raspHostAddr, ApplData.protocol);
 
-		CommUtils.aboutThreads("Before 2 - ");
 		new ControllerForLedActor ( ApplData.controllerName );
   	}
 	

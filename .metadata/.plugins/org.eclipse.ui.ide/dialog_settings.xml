@@ -9,6 +9,7 @@
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value="/home/nico/Scrivania/issLab2022Vuota/unibo.wenvUsage22"/>
 			<item value="/home/nico/Scrivania/issLab2022Vuota/unibo.actor22"/>
+			<item value="/home/nico/Scrivania/issLab2022Vuota/webForActors"/>
 			<item value="/home/nico/Scrivania/issLab2022Vuota/it.unibo.radarSystem22_4"/>
 			<item value="/home/nico/Scrivania/issLab2022Vuota/it.unibo.comm2022"/>
 			<item value="/home/nico/Scrivania/issLab2022Vuota/it.unibo.radarSystem22.domain"/>
@@ -25,6 +26,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/nico/Scrivania/issLab2022Vuota/webForActors"/>
 			<item value="/home/nico/Scrivania/issLab2022Vuota/it.unibo.virtualRobot2020"/>
 			<item value="/home/nico/Scrivania/issLab2022Vuota/it.unibo.radarSystem22_4"/>
 		</list>
