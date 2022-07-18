@@ -1,0 +1,58 @@
+/*
+ * il robot parte dalla cella 0,0
+ * il robot e' girato verso il basso
+ * eseguo deegli stap in avanti finche ho un fail (ho trovato il muro), contando il numero degli step
+ * giro a sinistra
+ * eseguo deegli stap in avanti finche ho un fail (ho trovato il muro), contando il numero degli step
+ * giro a sinistra
+ * eseguo deegli stap in avanti finche ho un fail (ho trovato il muro), contando il numero degli step
+ * giro a sinistra
+ * eseguo deegli stap in avanti finche ho un fail (ho trovato il muro), contando il numero degli step
+ * giro a sinistra
+ * ho trovato la dimensione della stanza
+ * 
+ * praticamente eseguo il ciclo 4 volte
+ * 
+ * il sisstema architetturalmente e' composto da: 
+ * ## VirtualRobot
+ * ## Mapper
+ * ## fra i due ci vuole un'altra entita' che mi permette di astrarre 
+ *         dal tipo di robot che ho sotto
+ * 
+ * il robot che serve a me deve avere due comandi:
+ * ## step(avanti)
+ * ## gira_sinistra
+ * 
+ * fortunatamente dispongo gia di basicrobot22 che mi aiuta
+ * se non avessi avuto qualcosa, avrei dovuto decidere se farlo in casa o ,se esiste, comprare sw altrui (o utilizzarlo se e' opensource)
+ *  
+ * qualunque mossa faccio, devo aggiornare una rappresentazione di cio che ho fatto per disegnare la mappa
+ * 
+ * Cos' e' una mappa? una struttura dati
+ * 
+ * fortunatamente dispongo gia di un'entita chiamata planner
+ * 
+ */
+ 
+ 
+ 
+System mapperqak22
+ 
+Dispatch cmd       	: cmd(MOVE)    
+ 
+ 
+Context ctxqak22 ip [host="127.0.0.1" port=8020] 
+Context ctxbasicqak22 ip [host="localhost" port=8021] 
+
+ExternalQActor basicqak context ctxbasicqak22
+
+QActor mapperqak22 context ctxbasicqak22 {
+	State s0 initial {
+		println("mapperbuilder start")
+		[# unibo.kotlin.planner22Util.initAI() #]
+		run unibo.kotlin.planner22Util.showMap()
+	}
+}
+
+ 
+  

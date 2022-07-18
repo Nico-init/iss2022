@@ -1,0 +1,71 @@
+/* 
+ * ================================================================================
+ * basicrobot.qak
+ * questo e' un MODELLO (istanza del metamodello QAK)
+ * definito dall'analisi del problema
+ * ================================================================================
+ */ 
+  
+System   basicrobot                
+
+Dispatch cmd       	: cmd(MOVE)     
+Request  step       : step( TIME )	
+Reply    stepdone   : stepdone(V)  
+Reply    stepfail   : stepfail(DURATION, CAUSE)
+Event    sonar  	: sonar(DISTANCE,NAME)
+
+
+Context ctxbasicrobot ip [host="localhost" port=8020]
+Context ctxconsolemock ip [host="127.0.0.1" port=8021]
+
+QActor basicrobot context ctxbasicrobot{
+	State s0 initial {
+		printCurrentMessage
+	}
+	Transition t0 whenMsg cmd -> handleCMD
+					whenRequest step -> handleStep
+	
+	
+/*introduco un mock object che simula la console
+ * invio un comando cmd al basicrobot
+ * verifico che il basicrobot sia in grado di ricevere ed eseguire il comando
+ */
+	
+	State handleCMD {
+		printCurrentMessage
+	}
+	
+	State handleStep {
+		printCurrentMessage
+		delay 500
+		
+//		println("simulo step andato bene")
+//		replyTo step with stepdone : stepdone(ok)
+		
+		println("simulo step andato male")
+		replyTo step with stepfail : stepfail(fail)
+		
+	}
+}
+
+QActor consolemock context ctxconsolemock{
+	State s0 initial{
+		delay 300
+//		println("sending cmd(w) to basicrobot") 
+//		forward basicrobot -m cmd : cmd(w)
+		
+		println("sending step(100) to basicrobot") 
+		//request basicrobot -m step : step(100)
+		
+	}
+	Transition t0 whenReply stepdone -> handleStepDone
+				whenReply stepfail -> handleStepFailed
+	
+	State handleStepDone {
+		printCurrentMessage
+	}
+	
+	State handleStepFailed {
+		printCurrentMessage
+	}
+}
