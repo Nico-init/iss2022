@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-    <libraryInfo home="/usr/lib/jvm/java-11-openjdk-amd64" version="11.0.15"/>
+    <libraryInfo home="/usr/lib/jvm/java-11-openjdk-amd64" version="11.0.17"/>
     <libraryInfo home="/home/nico/.sdkman/candidates/java/current/jre" version="1.8.0_302">
         <bootpath>
             <entry path="/home/nico/.sdkman/candidates/java/8.0.302-open/jre/lib/resources.jar"/>

@@ -5218,3 +5218,451 @@ Binding(ALT+SHIFT+R,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2022-08-05 11:32:50.258 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=11.0.15
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.dsl.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.dsl.product
+
+!ENTRY org.eclipse.jface 2 0 2022-08-05 11:33:00.515
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-05 11:33:00.515
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2568611c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2bda7a5b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-05 11:33:00.515
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47374fa5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@289da1bc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:33:12.759
+!MESSAGE Unexpected Exception
+!STACK 0
+org.eclipse.jface.text.BadLocationException: Offset > length: 636 > 629
+	at org.eclipse.jface.text.ListLineTracker.getLineNumberOfOffset(ListLineTracker.java:141)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:155)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:872)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.jetbrains.kotlin.ui.editors.annotations.DiagnosticAnnotationUtil.createKotlinAnnotation(DiagnosticAnnotationUtil.java:151)
+	at org.jetbrains.kotlin.ui.editors.annotations.DiagnosticAnnotationUtil.handleDiagnostics(DiagnosticAnnotationUtil.java:79)
+	at org.jetbrains.kotlin.ui.builder.BaseKotlinBuilderElement.updateLineMarkers(BaseKotlinBuilderElement.kt:74)
+	at org.jetbrains.kotlin.ui.builder.BaseKotlinBuilderElement$makeClean$1.invoke(BaseKotlinBuilderElement.kt:45)
+	at org.jetbrains.kotlin.ui.builder.BaseKotlinBuilderElement$makeClean$1.invoke(BaseKotlinBuilderElement.kt:44)
+	at org.jetbrains.kotlin.ui.builder.KotlinAnalysisJobKt$runCancellableAnalysisFor$2.done(KotlinAnalysisJob.kt:94)
+	at org.eclipse.core.internal.jobs.JobListeners.doNotify(JobListeners.java:80)
+	at org.eclipse.core.internal.jobs.JobListeners.done(JobListeners.java:118)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:702)
+	at org.eclipse.core.internal.jobs.WorkerPool.endJob(WorkerPool.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:83)
+
+!ENTRY org.jetbrains.kotlin.ui 4 2 2022-08-05 11:33:12.760
+!MESSAGE Problems occurred when invoking code from plug-in: "org.jetbrains.kotlin.ui".
+!STACK 0
+org.eclipse.jface.text.BadLocationException: Offset > length: 636 > 629
+	at org.eclipse.jface.text.ListLineTracker.getLineNumberOfOffset(ListLineTracker.java:141)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:155)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:872)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.jetbrains.kotlin.ui.editors.annotations.DiagnosticAnnotationUtil.createKotlinAnnotation(DiagnosticAnnotationUtil.java:151)
+	at org.jetbrains.kotlin.ui.editors.annotations.DiagnosticAnnotationUtil.handleDiagnostics(DiagnosticAnnotationUtil.java:79)
+	at org.jetbrains.kotlin.ui.builder.BaseKotlinBuilderElement.updateLineMarkers(BaseKotlinBuilderElement.kt:74)
+	at org.jetbrains.kotlin.ui.builder.BaseKotlinBuilderElement$makeClean$1.invoke(BaseKotlinBuilderElement.kt:45)
+	at org.jetbrains.kotlin.ui.builder.BaseKotlinBuilderElement$makeClean$1.invoke(BaseKotlinBuilderElement.kt:44)
+	at org.jetbrains.kotlin.ui.builder.KotlinAnalysisJobKt$runCancellableAnalysisFor$2.done(KotlinAnalysisJob.kt:94)
+	at org.eclipse.core.internal.jobs.JobListeners.doNotify(JobListeners.java:80)
+	at org.eclipse.core.internal.jobs.JobListeners.done(JobListeners.java:118)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:702)
+	at org.eclipse.core.internal.jobs.WorkerPool.endJob(WorkerPool.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:83)
+
+!ENTRY org.jetbrains.kotlin.core 2 0 2022-08-05 11:33:12.845
+!MESSAGE Could not check for update (Could not obtain update site)
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:34:12.359
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:35:45.948
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:35:46.534
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:36:08.071
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:36:34.081
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:36:36.981
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:36:37.606
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:36:43.028
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:36:48.556
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:36:53.593
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:36:54.472
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:37:01.904
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:37:19.014
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:37:58.104
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:37:59.396
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:00.475
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:01.044
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:02.020
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:13.447
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:15.351
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:16.420
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:23.166
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:34.009
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:36.303
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:40.329
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:42.651
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:45.876
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:58.104
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:38:59.365
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:39:02.510
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:39:44.402
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:39:50.619
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:39:52.720
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:40:49.264
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:40:52.358
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:23.067
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:36.013
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:37.390
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:42.574
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:43.255
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:44.794
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:45.878
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:47.920
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:48.798
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:52.161
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:52.963
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:57.798
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:41:59.439
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:42:35.637
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:42:41.284
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:42:54.645
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:43:02.166
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:43:03.542
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:43:04.926
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:43:06.182
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:43:32.355
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@582679fd
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:44:22.094
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:44:38.853
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:44:40.254
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:44:42.050
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:44:43.570
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:44:44.448
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:47:36.268
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:47:37.678
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:47:39.415
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:47:40.271
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:47:40.861
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:47:44.202
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:47:45.722
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:48:01.871
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:48:03.566
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:48:04.170
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:48:36.789
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:48:39.723
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:49:00.100
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:49:03.888
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:49:23.695
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:50:23.067
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:50:23.858
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:50:25.117
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-05 11:50:26.387
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@77cc9049
+!SESSION 2022-08-06 09:17:37.258 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=11.0.16
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.dsl.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.dsl.product
+
+!ENTRY org.eclipse.jface 2 0 2022-08-06 09:17:46.522
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-06 09:17:46.522
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42c55978,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@690e4b00,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-06 09:17:46.522
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e3d84a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2728add3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-06 09:17:52.019
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@6e415b5
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-06 09:17:52.889
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@6e415b5
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2022-08-06 09:18:22.971
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@6e415b5
+!SESSION 2023-01-11 09:55:36.289 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=11.0.17
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.dsl.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.dsl.product
+
+!ENTRY org.eclipse.jface 2 0 2023-01-11 09:55:43.959
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-11 09:55:43.959
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@56a72887,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c8dea0b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-01-11 09:55:43.959
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b9beefe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4cddc036,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2023-01-11 09:55:48.568
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@21ae9aca
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2023-01-11 09:55:49.509
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@21ae9aca
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2023-01-11 09:55:56.155
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@6e0ed05c
+
+!ENTRY org.jetbrains.kotlin.core 4 0 2023-01-11 09:55:56.502
+!MESSAGE Failed to retrieve IFile from editor org.jetbrains.kotlin.ui.editors.KotlinFileEditor@6e0ed05c
+
+!ENTRY org.jetbrains.kotlin.core 2 0 2023-01-11 09:58:49.353
+!MESSAGE Could not check for update (Could not obtain update site)

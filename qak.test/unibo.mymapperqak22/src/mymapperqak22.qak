@@ -1,0 +1,55 @@
+/* >>> scrivi un'applicazione che faccia la mappa (in unita' robotiche[step])  della stanza assumendo 
+ * 	che sia vuota e che sia di forma rettangolare
+ * 
+ * non mi preoccupo di come avviene l'interazione (tcp, mqtt..)
+ * 
+ * 
+ * il robot parte dalla cella 0,0
+ * il robot e' girato verso il basso
+ * eseguo degli step in avanti finche ho un fail (ho trovato il muro), contando il numero degli step
+ * giro a sinistra
+ * eseguo degli step in avanti finche ho un fail (ho trovato il muro), contando il numero degli step
+ * giro a sinistra
+ * eseguo degli step in avanti finche ho un fail (ho trovato il muro), contando il numero degli step
+ * giro a sinistra
+ * eseguo degli step in avanti finche ho un fail (ho trovato il muro), contando il numero degli step
+ * giro a sinistra
+ * ho trovato la dimensione della stanza
+ * 
+ * praticamente eseguo il ciclo 4 volte
+ * ho bisogno di un contatore per gli step
+ * 
+ * Progetto fatto da: struttura, interazione, comportamento
+ * 
+ * Architettura sistema e' composta da: 
+ * ## VirtualRobot
+ * ## Mapper (quello che ha la logica di comportamento)
+ * ## fra i due ci vuole un'altra entita' che mi permette di astrarre 
+ *    dal tipo di robot che ho sotto. Passa dai comandi astratti a quelli specifici per il tipo di VirtualRobot che sta sotto
+ *    Riporta le risposte del VirtualRobot al Mapper
+ * 
+ * il robot che serve a me deve avere due comandi:
+ * ## step(avanti)
+ * ## gira_sinistra
+ * 
+ * fortunatamente dispongo gia di basicrobot22 che mi aiuta
+ *** è un attore
+ * se non avessi avuto qualcosa, avrei dovuto decidere se farlo in casa o ,se esiste, comprare sw altrui (o utilizzarlo se e' opensource)
+ *  
+ * qualunque mossa faccio, devo aggiornare una rappresentazione di cio che ho fatto per disegnare la mappa
+ * 
+ * Cos' e' una mappa? una struttura dati
+ * 
+ * fortunatamente dispongo gia di un'entita chiamata planner
+ * 
+ */
+ System mymapperqak22
+
+ 
+ Context ctxmapperqak22 ip [host='localhost' port=8019]
+ Context ctxbasicrobot ip [host="127.0.0.1" port=8020]  
+ 
+ ExternalQActor basicrobot context ctxbasicrobot
+   
+ 
+ 
